@@ -1,3 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723691715
-icon.svg::CompressedTexture2D::2969196532957947722::1723691713::1723691715::1::::<><>::
+::res://::1723694237
+Title Screen.tscn::PackedScene::4366502159661445320::1723694237::0::1::::<><>::res://uncommon/Title Screen.gd<>uid://beghuyoi6r0r4::::res://fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf<>uid://je60eflmfdhm::::res://sprites/settings.png
+::res://common/::1723694229
+player.gd::GDScript::-1::1723694229::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6933406971146689493::1723693954::0::1::::<><>::
+::res://fonts/::1723694229
+::res://fonts/Pixelify_Sans/::1723694229
+OFL.txt::TextFile::-1::1723692643::0::1::::<><>::
+PixelifySans-VariableFont_wght.ttf::FontFile::2680024342190325179::1723692643::1723694229::1::::<><>::
+README.txt::TextFile::-1::1723692643::0::1::::<><>::
+::res://fonts/Pixelify_Sans/static/::1723694229
+PixelifySans-Bold.ttf::FontFile::1002558661075178802::1723692643::1723694229::1::::<><>::
+PixelifySans-Medium.ttf::FontFile::2614645800463608860::1723692643::1723694229::1::::<><>::
+PixelifySans-Regular.ttf::FontFile::7062154327082987391::1723692643::1723694229::1::::<><>::
+PixelifySans-SemiBold.ttf::FontFile::7901843713080050138::1723692643::1723694229::1::::<><>::
+::res://sprites/::1723694234
+icon.svg::CompressedTexture2D::2969196532957947722::1723691713::1723694231::1::::<><>::
+settings.png::CompressedTexture2D::641884193715361934::1723692501::1723694234::1::::<><>::
+::res://uncommon/::1723694237
+Pong.tscn::PackedScene::2376013152816023443::1723694229::0::1::::<><>::uid://beghuyoi6r0r4::::res://fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf
+Title Screen.gd::GDScript::-1::1723693410::0::1::::<>Control<>::

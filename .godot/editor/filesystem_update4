@@ -1,0 +1,10 @@
+res://Title Screen.tscn
+res://Title Screen.gd
+res://Pong.tscn
+res://player.tscn
+res://uncommon/Pong.tscn
+res://common/player.gd
+res://uncommon/Title Screen.tscn
+res://uncommon/Title Screen.gd
+res://common/player.tscn
+res://Global.gd

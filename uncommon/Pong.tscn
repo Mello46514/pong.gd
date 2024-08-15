@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://837ubpgyoel4"]
+
+[ext_resource type="FontFile" uid="uid://beghuyoi6r0r4" path="res://fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="1_jyogq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyut5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwhm2"]
+size = Vector2(971.5, 25.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daf8y"]
+size = Vector2(64, 820)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(480, 7.5)
+scale = Vector2(960, 15)
+mesh = SubResource("BoxMesh_qyut5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(480, 792)
+scale = Vector2(960, 15)
+mesh = SubResource("BoxMesh_qyut5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(478, 797)
+shape = SubResource("RectangleShape2D_xwhm2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(483, 2.75)
+shape = SubResource("RectangleShape2D_xwhm2")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 45.0
+offset_right = 959.0
+offset_bottom = 390.0
+theme_override_colors/font_color = Color(0.564962, 0.564962, 0.564962, 1)
+theme_override_fonts/font = ExtResource("1_jyogq")
+theme_override_font_sizes/font_size = 116
+text = "0 : 0"
+horizontal_alignment = 1
+
+[node name="Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-32, 399)
+shape = SubResource("RectangleShape2D_daf8y")
+
+[node name="Right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(993, 400)
+shape = SubResource("RectangleShape2D_daf8y")
