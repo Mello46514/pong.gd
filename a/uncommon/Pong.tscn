@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://837ubpgyoel4"]
+
+[ext_resource type="Script" path="res://uncommon/Pong.gd" id="1_gatsq"]
+[ext_resource type="FontFile" uid="uid://beghuyoi6r0r4" path="res://fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="1_jyogq"]
+[ext_resource type="PackedScene" uid="uid://c51ug2af3d60p" path="res://common/player.tscn" id="2_su77v"]
+[ext_resource type="PackedScene" uid="uid://bwrl12mosu2dw" path="res://ball.tscn" id="3_wb4mr"]
+[ext_resource type="PackedScene" uid="uid://ckmp0ycjtajdn" path="res://ai.tscn" id="4_kygtq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyut5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwhm2"]
+size = Vector2(971.5, 25.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daf8y"]
+size = Vector2(64, 820)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gatsq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(480, 7.5)
+scale = Vector2(960, 15)
+mesh = SubResource("BoxMesh_qyut5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(480, 792)
+scale = Vector2(960, 15)
+mesh = SubResource("BoxMesh_qyut5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(478, 797)
+shape = SubResource("RectangleShape2D_xwhm2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(483, 2.75)
+shape = SubResource("RectangleShape2D_xwhm2")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 45.0
+offset_right = 959.0
+offset_bottom = 390.0
+theme_override_colors/font_color = Color(0.564962, 0.564962, 0.564962, 1)
+theme_override_fonts/font = ExtResource("1_jyogq")
+theme_override_font_sizes/font_size = 116
+text = "0 : 0"
+horizontal_alignment = 1
+
+[node name="Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2(-32, 399)
+shape = SubResource("RectangleShape2D_daf8y")
+
+[node name="Right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2(993, 400)
+shape = SubResource("RectangleShape2D_daf8y")
+
+[node name="Player" parent="." instance=ExtResource("2_su77v")]
+position = Vector2(26, 400)
+
+[node name="Area2D" parent="." instance=ExtResource("3_wb4mr")]
+position = Vector2(480, 360)
+
+[node name="ai" parent="." instance=ExtResource("4_kygtq")]
+position = Vector2(934, 400)

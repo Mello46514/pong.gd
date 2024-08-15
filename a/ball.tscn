@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwrl12mosu2dw"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_x5wy5"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_r2ko6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3wim"]
+radius = 5.0
+
+[node name="Area2D" type="Node2D"]
+script = ExtResource("1_x5wy5")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(9.75204, 9.75204)
+mesh = SubResource("SphereMesh_r2ko6")
+
+[node name="kill" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill"]
+shape = SubResource("CircleShape2D_o3wim")
+debug_color = Color(0.956909, 1.92523e-07, 0.535416, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_o3wim")
+debug_color = Color(0.956909, 1.92523e-07, 0.535416, 0.42)
+
+[node name="xt" type="Timer" parent="."]
+one_shot = true
+
+[node name="yt" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
